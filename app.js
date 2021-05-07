@@ -28,10 +28,10 @@ mongoose
 app.use(cors());
 app.use(bodyparser.json()); // parsing req body
 app.use(adminRoutes);
-
+const port = process.env.PORT || 4000
 //.....
-app.listen(4000, () => {
-  console.log("server is up on port 4000");
+app.listen(port, () => {
+  console.log(`server is up on port ${port}`);
 });
 // error handler
 app.use((error, req, res, next) => {
